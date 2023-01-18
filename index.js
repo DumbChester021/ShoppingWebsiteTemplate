@@ -1,20 +1,20 @@
-const card1Button = document.getElementById("product1Button");
-const card2Button = document.getElementById("product2Button");
-const card3Button = document.getElementById("product3Button");
-const card4Button = document.getElementById("product4Button");
+const product1Button = document.getElementById("product1Button");
+const product2Button = document.getElementById("product2Button");
+const product3Button = document.getElementById("product3Button");
+const product4Button = document.getElementById("product4Button");
 
-card1Button.addEventListener("click", () => {
-  window.location.href = "products.html?product=1";
+product1Button.addEventListener("click", () => {
+  window.location.href = "products.html?product=1&name=Barley+Capsule";
 });
 
-card2Button.addEventListener("click", () => {
-  window.location.href = "products.html?product=2";
+product2Button.addEventListener("click", () => {
+  window.location.href = "products.html?product=2&name=Fusion+Coffee";
 });
 
-card3Button.addEventListener("click", () => {
-  window.location.href = "products.html?product=3";
+product3Button.addEventListener("click", () => {
+  window.location.href = "products.html?product=3&name=Boost+Coffee";
 });
 
-card4Button.addEventListener("click", () => {
-  window.location.href = "products.html?product=4";
+product4Button.addEventListener("click", () => {
+  window.location.href = "products.html?product=4&name=Barley+Powder";
 });

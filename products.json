@@ -1,0 +1,52 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Barley Capsule",
+            "description": "Pure organic, high in fiber, protein, and complex carbohydrates with micronutrients. Has 17 vitamins, 16 minerals, and 18 amino acids, is high in chlorophyll, and enzymes, and is rich in fiber.",
+            "imgSrc": "assets/product1.png"
+        },
+        {
+            "id": 2,
+            "name": "Fusion Coffee",
+            "description": "High in dietary fiber, protein, and complex carbohydrates from organic young barley grass, robusta coffee beans.",
+            "imgSrc": "assets/product2.png"
+        },
+        {
+            "id": 3,
+            "name": "Boost Coffee",
+            "description": "Boost Coffee is a 15-gram mix of Robusta coffee, Tongkat Ali, and organic barley grass powder. It's designed for active people and provides energy and stamina with 78mg of robusta coffee per serving.",
+            "imgSrc": "assets/product3.png"
+        },
+        {
+            "id": 4,
+            "name": "Barley Powder",
+            "description": "Santé Pure Barley in the canister is pure, certified organic young barley grass powder, added with Stevia. The Pure Barley Canister in 200g is perfect for those who want to have more scoops of this superfood in a glass.",
+            "imgSrc": "assets/product4.png"
+        },
+        {
+            "id": 5,
+            "name": "Vitamin C",
+            "description": "Get double the protection and double the health benefits when you take Daily-C Plus 500mg. It’s got the combination of Vitamin C and Zinc that help boost immunity and fight off free radicals, to support overall health and wellness.",
+            "imgSrc": "https://ap-south-1.linodeobjects.com/twcako-storage/admin/664989154.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Product 6",
+            "description": "This is the sixth product in our line. It is a best-selling product that is loved by many.",
+            "imgSrc": "assets/product6.png"
+        },
+        {
+            "id": 7,
+            "name": "Product 7",
+            "description": "This is the seventh product in our line. It is an innovative product that is ahead of its time.",
+            "imgSrc": "assets/product7.png"
+        },
+        {
+            "id": 8,
+            "name": "Product 8",
+            "description": "This is the eighth and final product in our line. It is a high-performance product that is sure to impress.",
+            "imgSrc": "assets/product8.png"
+        }
+    ]
+}

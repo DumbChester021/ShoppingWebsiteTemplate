@@ -8,10 +8,10 @@ fetch('products.json')
             console.log("ProductID is:" + productId);
 
             let col = document.createElement("div");
-            col.classList.add("col", "py-2");
+            col.classList.add("col","py-2");
 
             let card = document.createElement("div");
-            card.classList.add("card");
+            card.classList.add("card","ps-sm-5","ps-md-0");
             card.style.width = "18rem";
             
             let img = document.createElement("img");

@@ -1,10 +1,21 @@
 const urlParams = new URLSearchParams(location.search);
-const productU = urlParams.get("product");
-const productNameU = urlParams.get("name");
+const productId = urlParams.get("product");
 
 var productImg = document.getElementById("productImg");
 var productName = document.getElementById("productName");
+var productDescription = document.getElementById("productDescription")
+var skuId = document.getElementById("skuId");
 
-productImg.src = "assets/product" + productU + ".png";
-productName.textContent = productNameU;
-console.log("The PriductU is:" + productU);
+console.log("The productId is:" + productId);
+
+fetch('products.json')
+    .then(response => response.json())
+    .then(data => {
+        let product = data.products.find(p => p.id == productId);
+        if (product) {
+            productImg.src = product.imgSrc;
+            productName.innerHTML = product.name;
+            productDescription.textContent = product.description;
+            skuId.innerHTML = "SKU: JS-"+ product.id;
+        }
+    });

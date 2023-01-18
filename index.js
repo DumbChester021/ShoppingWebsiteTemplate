@@ -1,10 +1,12 @@
-
-
 fetch('products.json')
     .then(response => response.json())
     .then(data => {
         let productsContainer = document.getElementById("productsContainer");
         data.products.forEach(product => {
+
+            let productId = product.id;
+            console.log("ProductID is:" + productId);
+
             let col = document.createElement("div");
             col.classList.add("col", "py-2");
 
@@ -35,6 +37,9 @@ fetch('products.json')
             button.type = "button";
             button.classList.add("btn", "btn-primary");
             button.innerHTML = "View Product";
+            button.addEventListener("click", function(){
+              window.location.href = "products.html?product="+productId; 
+            });
             cardBody.appendChild(button);
             
             card.appendChild(cardBody);

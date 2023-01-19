@@ -64,15 +64,15 @@
                 <p class="small mb-1" id="skuId"></p>
                 <h1 class="display-5 fw-bolder" id="productName">Shop item template</h1>
                 <div class="fs-5 mb-5">
-                    <span class="text-decoration-line-through">$45.00</span>
-                    <span>$40.00</span>
+                    <span class="text-decoration-line-through text-secondary" id="bloatedPrice"></span>
+                    <span id="productPrice"></span>
                 </div>
                 <p class="lead" id="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
                 <div class="d-flex">
                     <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                    <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                    <button class="btn btn-outline-dark flex-shrink-0" id="buyButton" type="button">
                         <i class="bi-cart-fill me-1"></i>
-                        Add to cart
+                         Buy Now
                     </button>
                 </div>
             </div>
@@ -218,6 +218,77 @@
                 <i class="bi bi-arrow-up"></i>
             </button>
         </div>
+        <!--Modal for Buy Button-->
+        <button id="buyButton" class="btn btn-primary">Buy</button>
+
+<div class="modal" id="shippingModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Input your Shipping Details</h5>
+        <button type="button" class="btn-close" data-dismiss="modal"></button>
+      </div>
+    <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="mobileNumber">Mobile Number</label>
+            <input type="text" class="form-control" id="mobileNumber" placeholder="Enter your mobile number">
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Enter your address">
+          </div>
+          <div class="form-group">
+            <label for="brgyStreet">Brgy/Street</label>
+            <input type="text" class="form-control" id="brgyStreet" placeholder="Enter your Brgy/Street">
+          </div>
+          <div class="form-group">
+            <label for="townCity">Town/City</label>
+            <input type="text" class="form-control" id="townCity" placeholder="Enter your Town/City">
+          </div>
+          <div class="form-group">
+            <label for="stateProvince">State Province</label>
+            <input type="text" class="form-control" id="stateProvince" placeholder="Enter your State Province">
+          </div>
+          <div class="form-group">
+            <label for="region">Region</label>
+            <select class="form-control" id="region">
+              <option>Region 1</option>
+              <option>Region 2</option>
+              <option>Region 3</option>
+              <option>Region 4</option>
+              <option>Region 5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="country">Country</label>
+            <select class="form-control" id="country" disabled>
+              <option>Philippines</option>
+            </select>
+          </div>
+        <div class="form-group">
+            <label for="postalCode">Postal Code / ZIP</label>
+            <input type="text" class="form-control" id="postalCode" placeholder="Enteryour Postal Code / ZIP">
+        </div>
+            <div class="form-group">
+                <label for="shippingNotes">Shipping Notes</label>
+                    <textarea class="form-control" id="shippingNotes" rows="3"></textarea>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="placeOrder">Place Order</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel Order</button>
+    </div>
+</div>
+        
+          </div>
+        </div>
+
     </footer>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="products.js"></script>

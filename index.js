@@ -11,7 +11,7 @@ fetch('products.json')
             col.classList.add("col","py-2");
 
             let card = document.createElement("div");
-            card.classList.add("card","ps-sm-5","ps-md-0");
+            card.classList.add("card");
             card.style.width = "18rem";
             
             let img = document.createElement("img");
@@ -47,3 +47,28 @@ fetch('products.json')
             productsContainer.appendChild(col);
         });
     });
+
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

@@ -4,17 +4,18 @@ const productId = urlParams.get("product");
 var productImg = document.getElementById("productImg");
 var productName = document.getElementById("productName");
 var orderName = document.getElementById("orderName");
-var productDescription = document.getElementById("productDescription")
+var orderTotalPrice = document.getElementById("orderTotalPrice");
+var productDescription = document.getElementById("productDescription");
 var productPrice = document.getElementById("productPrice");
 var bloatedPrice = document.getElementById("bloatedPrice");
 var productQuantity = document.getElementById("inputQuantity");
 var product;
-
 var skuId = document.getElementById("skuId");
 
-console.log("The productId is:" + productId);
+readJson();
 
-fetch('products.json')
+function readJson() {
+  fetch('products.json')
     .then(response => response.json())
     .then(data => {
         product = data.products.find(p => p.id == productId);
@@ -26,25 +27,29 @@ fetch('products.json')
             productPrice.innerHTML = "₱" + product.price + ".00";
             bloatedPrice.innerHTML = "₱" + (product.price + ( product.price *  0.2 ));
             skuId.innerHTML = "SKU: JS-"+ product.id;
-            
+            return product;
         }
     });
+}
 
-        // Get the buy button and shipping modal elements
-    var buyButton = document.getElementById("buyButton");
-    var shippingModal = document.getElementById("shippingModal");
-
-    // Add an event listener to the buy button to open the modal when clicked
+    //Listener for buy Button
     buyButton.addEventListener("click", function() {
-        productQuantity = document.getElementById("inputQuantity");
-        if (productQuantity.value < 1 == false) {
-            productQuantity.innerHTML = 1;
-        }
-        orderName.innerHTML = "" + product.name + " x" + productQuantity.value;
-        shippingModal.classList.add("show");
-        shippingModal.style.display = "block";
-    });
-
+      productQuantity = document.getElementById("inputQuantity");
+      if (productQuantity.value < 1 == false) {
+          productQuantity.innerHTML = 1;
+      }
+      // Add this check before displaying the modal
+      if (isNaN(parseInt(productQuantity.value)) || parseInt(productQuantity.value) < 1 || parseInt(productQuantity.value) > 99) {
+          alert("Please enter a valid quantity between 1 and 99.");
+          return;
+      }
+      orderName.innerHTML = "" + product.name + " x" + productQuantity.value;
+      const totalPrice = (parseInt(product.price) * parseInt(productQuantity.value) );
+      orderTotalPrice.innerHTML = "₱" + totalPrice + ".00";
+      shippingModal.classList.add("show");
+      shippingModal.style.display = "block";
+  });
+  
     // Add an event listener to the close button to close the modal when clicked
     var closeButton = document.querySelector(".btn-close");
     closeButton.addEventListener("click", function() {
@@ -54,7 +59,7 @@ fetch('products.json')
 
     // Add an event listener to the Place Order button to Send Notifications to TG
     var placeOrderButton = document.getElementById("placeOrderButton");
-    placeOrderButton.addEventListener("click", function() {
+    placeOrderButton.addEventListener("click", function() {   
         // Get the values of the form inputs
         var name = document.getElementById("name").value;
         var mobileNumber = document.getElementById("mobileNumber").value;
@@ -68,9 +73,17 @@ fetch('products.json')
         var shippingNotes = document.getElementById("shippingNotes").value;
         var productName = document.getElementById("productName").innerHTML;
         var productPrice = document.getElementById("productPrice").innerHTML;
-    
+        var now = new Date();
+        var dateString2 = now.toLocaleDateString();
+        var timeString3 = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+        var orderNumber = generateRandomNumber();
+        var quantity = parseInt(productQuantity.value)
+        var totalPrice = (parseInt(product.price) * quantity )
+        totalPrice = "₱" + totalPrice + ".00";
+        
+
         // Construct the message to send
-        var msg = "New Order:%0AName: " + name + "%0AMobile Number: " + mobileNumber + "%0AAddress: " + address + ", " + brgy + ", " + city + ", " + province + ", " + region + ", " + country + "%0APostal Code: " + postalCode + "%0AShipping Notes: " + shippingNotes + "%0AProduct Name: " + productName + "%0AProduct Price: " + productPrice;
+        var msg = "New Order Placed!:%0AOrder number:1870" + orderNumber + "%0ADate:" + dateString2 + "%0ATime:" + timeString3 + "%0AName: " + name + "%0AMobile Number: " + mobileNumber + "%0AAddress: " + address + ", " + brgy + ", " + city + ", " + province + ", " + region + ", " + country + "%0APostal Code: " + postalCode + "%0AShipping Notes: " + shippingNotes + "%0AProduct Name: " + productName + "%0AProduct Price: " + productPrice + "%0AQuantity:" + quantity + "%0ATotal Price:" + totalPrice;
     
         // Send the message to Telegram
         var telegramUrl = "https://api.telegram.org/bot5319457642:AAFIlKkH6IsLqfUGd2RvI8GVBRtl_2FUaQE/sendMessage?chat_id=@BreakSoftOfficial&text=" + '"' + msg +'"';
@@ -91,6 +104,12 @@ fetch('products.json')
             shippingModal.classList.remove("show");
             shippingModal.style.display = "none";
         }
+        // Add this check before sending the request
+        if (!name || !mobileNumber || !address || !brgy || !city || !province || !region || !country || !postalCode) {
+          alert("Please fill out all the required fields.");
+          return;
+        }
+
         xhr.send();
     });
 
@@ -124,4 +143,11 @@ fetch('products.json')
     function backToTop() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
+    }
+
+        // Function to generate a random 12-digit number
+    function generateRandomNumber() {
+      let array = new Uint32Array(3);
+      window.crypto.getRandomValues(array);
+      return array.join("").substring(0, 12);
     }

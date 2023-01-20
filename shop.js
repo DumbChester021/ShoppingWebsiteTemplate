@@ -28,10 +28,10 @@ fetch('products.json')
             productName.innerHTML = product.name;
             cardBody.appendChild(productName);
             
-            let productDescription = document.createElement("p");
-            productDescription.classList.add("card-text");
-            productDescription.innerHTML = product.description;
-            cardBody.appendChild(productDescription);
+            let productPrice = document.createElement("p");
+            productPrice.classList.add("card-text");
+            productPrice.innerHTML = "₱" + product.price + ".00";
+            cardBody.appendChild(productPrice);
             
             let button = document.createElement("button");
             button.type = "button";

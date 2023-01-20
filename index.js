@@ -27,11 +27,6 @@ fetch('products.json')
             productName.classList.add("card-title");
             productName.innerHTML = product.name;
             cardBody.appendChild(productName);
-            
-            let productDescription = document.createElement("p");
-            productDescription.classList.add("card-text");
-            productDescription.innerHTML = product.description;
-            cardBody.appendChild(productDescription);
 
             let productPrice = document.createElement("p");
             productPrice.classList.add("card-text");

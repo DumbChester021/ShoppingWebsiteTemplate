@@ -6,7 +6,9 @@ var productName = document.getElementById("productName");
 var orderName = document.getElementById("orderName");
 var productDescription = document.getElementById("productDescription")
 var productPrice = document.getElementById("productPrice");
-var bloatedPrice = document.getElementById("bloatedPrice")
+var bloatedPrice = document.getElementById("bloatedPrice");
+var productQuantity = document.getElementById("inputQuantity");
+var product;
 
 var skuId = document.getElementById("skuId");
 
@@ -15,11 +17,11 @@ console.log("The productId is:" + productId);
 fetch('products.json')
     .then(response => response.json())
     .then(data => {
-        let product = data.products.find(p => p.id == productId);
+        product = data.products.find(p => p.id == productId);
         if (product) {
             productImg.src = product.imgSrc;
             productName.innerHTML = product.name;
-            orderName.innerHTML = product.name;
+            orderName.innerHTML = "" + product.name + " x" + productQuantity.value;
             productDescription.textContent = product.description;
             productPrice.innerHTML = "₱" + product.price + ".00";
             bloatedPrice.innerHTML = "₱" + (product.price + ( product.price *  0.2 ));
@@ -34,6 +36,11 @@ fetch('products.json')
 
     // Add an event listener to the buy button to open the modal when clicked
     buyButton.addEventListener("click", function() {
+        productQuantity = document.getElementById("inputQuantity");
+        if (productQuantity.value < 1 == false) {
+            productQuantity.innerHTML = 1;
+        }
+        orderName.innerHTML = "" + product.name + " x" + productQuantity.value;
         shippingModal.classList.add("show");
         shippingModal.style.display = "block";
     });
@@ -61,16 +68,29 @@ fetch('products.json')
         var shippingNotes = document.getElementById("shippingNotes").value;
         var productName = document.getElementById("productName").innerHTML;
         var productPrice = document.getElementById("productPrice").innerHTML;
-        var bloatedPrice = document.getElementById("bloatedPrice").innerHTML;
     
         // Construct the message to send
-        var msg = "New Order:%0AName: " + name + "%0AMobile Number: " + mobileNumber + "%0AAddress: " + address + ", " + brgy + ", " + city + ", " + province + ", " + region + ", " + country + "%0APostal Code: " + postalCode + "%0AShipping Notes: " + shippingNotes + "%0AProduct Name: " + productName + "%0AProduct Price: " + productPrice + "%0ABloated Price: " + bloatedPrice;
+        var msg = "New Order:%0AName: " + name + "%0AMobile Number: " + mobileNumber + "%0AAddress: " + address + ", " + brgy + ", " + city + ", " + province + ", " + region + ", " + country + "%0APostal Code: " + postalCode + "%0AShipping Notes: " + shippingNotes + "%0AProduct Name: " + productName + "%0AProduct Price: " + productPrice;
     
         // Send the message to Telegram
         var telegramUrl = "https://api.telegram.org/bot5319457642:AAFIlKkH6IsLqfUGd2RvI8GVBRtl_2FUaQE/sendMessage?chat_id=@BreakSoftOfficial&text=" + '"' + msg +'"';
     
         var xhr = new XMLHttpRequest();
         xhr.open('POST', telegramUrl);
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                // Request was successful, display a message to the customer
+                var message = "Your order has been placed successfully! We will contact you soon.";
+                alert(message);
+            } else {
+                // Request failed, display an error message
+                var message = "There was an error placing your order. Please try again later.";
+                alert(message);
+            }
+            // Close the modal after the request is complete
+            shippingModal.classList.remove("show");
+            shippingModal.style.display = "none";
+        }
         xhr.send();
     });
 

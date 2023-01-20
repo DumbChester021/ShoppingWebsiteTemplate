@@ -44,17 +44,10 @@
         },
         {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-7",
-            "name": "Product 7",
-            "description": "This is the seventh product in our line. It is an innovative product that is ahead of its time.",
-            "imgSrc": "assets/product7.png",
-            "price": "999"
-        },
-        {
-            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-8",
-            "name": "Product 8",
-            "description": "This is the eighth and final product in our line. It is a high-performance product that is sure to impress.",
-            "imgSrc": "assets/product8.png",
-            "price": "999"
+            "name": "Eric",
+            "description": "Masungit, Kuripot, Sugarol",
+            "imgSrc": "assets/product7.jpg",
+            "price": 20
         }
     ]
 }

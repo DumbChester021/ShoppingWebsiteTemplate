@@ -44,10 +44,74 @@
         },
         {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-7",
-            "name": "Eric",
-            "description": "Masungit, Kuripot, Sugarol",
-            "imgSrc": "assets/product7.jpg",
-            "price": 20
+            "name": "Original Pork Tocino",
+            "description": "The product which made Pampanga’s Best known not just in Pampanga but all over the world. This is the first and Original Tocino dated back in 1967.  Indeed, ito ang tamang timpla!",
+            "imgSrc": "assets/tocino220g.webp",
+            "price": 75
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-8",
+            "name": "Boneless Chicken Tocino",
+            "description": "Another first from Pampanga’s Best! Same original Tocino recipe made from 100% premium chicken meat.",
+            "imgSrc": "assets/chickentocino220g.webp",
+            "price": 80
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-9",
+            "name": "Skinless Longaniza",
+            "description": "A breakfast favorite typically served with eggs and garlic rice.  Dip it in vinegar, to balance that sweet taste it is known for. ",
+            "imgSrc": "assets/skinlesslonganiza225g.webp",
+            "price": 70
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-10",
+            "name": "Beef Tapa",
+            "description": "A Filipino version of Beef jerky, this choice cut beef is aged to improve its tenderness.  Having that salty and peppery taste, it is best served with garlic rice and egg.  Prepare this quick meal to satisfy that tapsilog craving.",
+            "imgSrc": "assets/beeftapa250g.webp",
+            "price": 105
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-11",
+            "name": "Sweet Ham",
+            "description": "Quick, easy and hassle free way of enjoying a good tasting ham. ",
+            "imgSrc": "assets/sweetham250g.webp",
+            "price": 70
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-12",
+            "name": "Pork Sisig",
+            "description": "A traditional dish that Kapampangans are known for.  Grilled Pork ears and onions with just the right amount of salt, pepper and calamansi makes this dish a staple in every household.",
+            "imgSrc": "assets/porksisig250g.webp",
+            "price": 90
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-13",
+            "name": "Tasty Meaty Hotdog with Cheese",
+            "description": "This reddish hotdog is perfect for feeding hungry kids, friends and office mates. Plump and firm to the touch; this delicious hotdog lets out a delectable juice and cheese with every bite.  Take it with mayonnaise, sauerkraut, mustard, catsup or whatever strikes your fancy.",
+            "imgSrc": "assets/cheesedog250g.webp",
+            "price": 70
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-14",
+            "name": "Pork Barbecue",
+            "description": "A classic Pinoy favorite! Pork meat marinated in Pampanga’s Best special blend of spices that gives it’s delicious sweet and savory taste.",
+            "imgSrc": "assets/porkbbq500g.webp",
+            "price": 165
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-15",
+            "name": "Pork Barbecue on Stick",
+            "description": "A classic Pinoy favorite on skewers! Pork meat marinated in Pampanga’s Best special blend of spices that gives it’s delicious sweet and savory taste.",
+            "imgSrc": "assets/porkbbqonstick500g.webp",
+            "price": 175
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-16",
+            "name": "Pork Tapa",
+            "description": "This is the pork version of the tapa. Made from choice pork cuts with a combination of sweet and peppery taste.",
+            "imgSrc": "assets/porktapa220g.webp",
+            "price": 75
         }
+        
     ]
 }

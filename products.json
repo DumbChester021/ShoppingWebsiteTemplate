@@ -40,7 +40,8 @@
             "name": "Smart Watch",
             "description": "Custom wallpaper, Bluetooth calling, music control, social APP message reminder, incoming call reminder, SMS reminder, multi-sport, alarm reminder, sedentary reminder, mobile phone search, music playback, stopwatch, step counting, distance, calories, sleep monitoring, Heart rate monitoring, blood pressure, blood oxygen, searching for devices, language switching and raising your hand to light up the screen. ",
             "imgSrc": "assets/product5.png",
-            "price": 699
+            "price": 699,
+            "colors": ["Black", "Red", "Pink", "Yellow"]
         },
         {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-7",

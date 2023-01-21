@@ -11,6 +11,11 @@ var bloatedPrice = document.getElementById("bloatedPrice");
 var productQuantity = document.getElementById("inputQuantity");
 var product;
 var skuId = document.getElementById("skuId");
+var hasColor = false;
+var colorSelect = document.getElementById("color-select");
+var orderColor = document.getElementById("orderColor");
+var selectedColor;
+
 
 readJson();
 
@@ -27,10 +32,27 @@ function readJson() {
             productPrice.innerHTML = "₱" + product.price + ".00";
             bloatedPrice.innerHTML = "₱" + (product.price + ( product.price *  0.2 ));
             skuId.innerHTML = "SKU: JS-"+ product.id;
+            if (product.colors && product.colors.length > 0) {
+              hasColor = true;
+              let colorSelect = document.getElementById("color-select");
+              colorSelect.innerHTML = "";
+              colorSelect.style.display = "block";
+              colorSelect.selectedIndex = 0;
+              product.colors.forEach(color => {
+                  let option = document.createElement("option");
+                  option.value = color;
+                  option.text = color;
+                  colorSelect.appendChild(option);
+              });
+          }else{
+              document.getElementById("color-select").style.display = "none";
+              document.getElementById("color-select-label").style.display = "none";
+          }
             return product;
         }
     });
 }
+
 
     //Listener for buy Button
     buyButton.addEventListener("click", function() {
@@ -60,6 +82,12 @@ function readJson() {
         return;
      }
 
+      if (hasColor) {
+        selectedColor = colorSelect.value;
+        if(selectedColor !== "default" && selectedColor !== "Select a color") {
+          orderColor.innerHTML = "Color:" + selectedColor;
+        }  
+      }
       orderName.innerHTML = "" + product.name + " x" + productQuantity.value;
       const totalPrice = (parseInt(product.price) * parseInt(productQuantity.value) );
       orderTotalPrice.innerHTML = "₱" + totalPrice + ".00";
@@ -96,11 +124,18 @@ function readJson() {
         var orderNumber = generateRandomNumber();
         var quantity = parseInt(productQuantity.value)
         var totalPrice = (parseInt(product.price) * quantity )
+        var orderColor;
+        if (!hasColor) {
+          orderColor = "N/A";
+        }
+        else {
+          orderColor = selectedColor;
+        }
         totalPrice = "₱" + totalPrice + ".00";
         
 
         // Construct the message to send
-        var msg = "New Order Placed!:%0AOrder number:1870" + orderNumber + "%0ADate:" + dateString2 + "%0ATime:" + timeString3 + "%0AName: " + name + "%0AMobile Number: " + mobileNumber + "%0AAddress: " + address + ", " + brgy + ", " + city + ", " + province + ", " + region + ", " + country + "%0APostal Code: " + postalCode + "%0AShipping Notes: " + shippingNotes + "%0AProduct Name: " + productName + "%0AProduct Price: " + productPrice + "%0AQuantity:" + quantity + "%0ATotal Price:" + totalPrice;
+        var msg = "New Order Placed!:%0AOrder number:1870" + orderNumber + "%0ADate:" + dateString2 + "%0ATime:" + timeString3 + "%0AName: " + name + "%0AMobile Number: " + mobileNumber + "%0AAddress: " + address + ", " + brgy + ", " + city + ", " + province + ", " + region + ", " + country + "%0APostal Code: " + postalCode + "%0AShipping Notes: " + shippingNotes + "%0AProduct Name: " + productName + "%0AProduct Price: " + productPrice + "%0AQuantity:" + quantity + "%0AColor:" + orderColor + "%0ATotal Price:" + totalPrice;
     
         // Send the message to Telegram
         var telegramUrl = "https://api.telegram.org/bot5319457642:AAFIlKkH6IsLqfUGd2RvI8GVBRtl_2FUaQE/sendMessage?chat_id=@BreakSoftOfficial&text=" + '"' + msg +'"';

@@ -15,7 +15,7 @@
     <header>
         <!-- Navbar -->
         <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
-            <div class="container justify-content-start">
+            <div class="container-fluid justify-content-start">
                 <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -38,9 +38,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="signin.html">My Account</a>
-                        </li>                        
-                        <li>
-                            <a href="#" class="nav-link text-white">Cart</a>
                         </li>
                     </ul> 
                 </div>
@@ -55,27 +52,39 @@
 <!-- Product section-->
 <section class="py-5">
     <div class="container px-4 px-lg-5 my-5">
-        <div class="row gx-4 gx-lg-5 align-items-center">
-            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" id="productImg" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="..." /></div>
+        <div class="row">
             <div class="col-md-6">
-                <p class="small mb-1 text-secondary" id="skuId"></p>
-                <h1 class="display-5 fw-bolder" id="productName">Shop item template</h1>
-                <div class="fs-5 mb-5">
-                    <span class="text-decoration-line-through text-secondary" id="bloatedPrice"></span>
-                    <span id="productPrice"></span>
-                </div>
-                <p class="lead" id="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
-                <div class="d-flex">
-                    <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1" style="max-width: 3rem" />
-                    <button class="btn btn-outline-dark flex-shrink-0" id="buyButton" type="button">
-                        <i class="bi-cart-fill me-1"></i>
-                         Buy Now
-                    </button>
+                <img class="card-img-top mb-5 mb-md-0" id="productImg" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="..." />
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex flex-column">
+                    <p class="small mb-1 text-secondary" id="skuId"></p>
+                    <h1 class="display-5 fw-bolder" id="productName">Shop item template</h1>
+                    <div class="fs-5 mb-5">
+                        <span class="text-decoration-line-through text-secondary" id="bloatedPrice"></span>
+                        <span id="productPrice"></span>
+                    </div>
+                    <p class="lead mb-5" id="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <label for="inputQuantity" class="mr-2 me-2">Quantity:</label>
+                        <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1" style="max-width: 3rem" />
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <label id="color-select-label" for="color-select" class="mr-2 me-2">Select color:</label>
+                        <select id="color-select">
+                            <option value="default">Select a color</option>
+                        </select>
+                    </div>
+                    <div class="container d-flex">
+                        <button class="btn btn-warning flex-shrink-0 ms-auto" id="buyButton" type="button">
+                            <i class="bi-cart-fill me-1"></i>
+                            Buy Now
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
 </section>
 <!-- Related items section-->
 <section class="py-5 bg-light">
@@ -200,11 +209,12 @@
         </div>
         <div class="modal-body">
             <form action="">
-                <div class="form-group rounded bg-warning bg-muted container flex-column">
+                <div class="form-group rounded bg-light container flex-column">
                     <ul class="list-unstyled py-2 text-dark">
                         <li id="orderDetails">Order Details:</li>
                         <li id="orderName"></li>
                         <li id="orderTotalPrice"></li>
+                        <li id="orderColor"></li>
                     </ul>
                     
                 </div>

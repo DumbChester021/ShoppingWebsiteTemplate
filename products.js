@@ -110,9 +110,9 @@ function readJson() {
         xhr.onload = function() {
             if (xhr.status === 200) {
                 // Request was successful, display a message to the customer
-                if (document.getElementById("alert-container-modal").hasChildNodes()) {
+                if (document.getElementById("alert-container-page").hasChildNodes()) {
                   // Remove the old alert
-                  document.getElementById("alert-container-modal").removeChild(document.getElementById("alert-container").firstChild);
+                  document.getElementById("alert-container-page").removeChild(document.getElementById("alert-container").firstChild);
                 }
                 //Create a new div element for the alert
                 var alertDiv = document.createElement("div");
@@ -121,7 +121,7 @@ function readJson() {
                 //Add the text of the alert to the div
                 alertDiv.innerHTML = "Your order has been placed successfully! We will contact you soon.";
                 //Add the alert div to the page
-                document.getElementById("alert-container-modal").appendChild(alertDiv);
+                document.getElementById("alert-container-page").appendChild(alertDiv);
                 // remove alert after 5 seconds
                 setTimeout(function(){ 
                     alertDiv.remove(); 

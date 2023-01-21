@@ -40,9 +40,26 @@ function readJson() {
       }
       // Add this check before displaying the modal
       if (isNaN(parseInt(productQuantity.value)) || parseInt(productQuantity.value) < 1 || parseInt(productQuantity.value) > 99) {
-          alert("Please enter a valid quantity between 1 and 99.");
-          return;
-      }
+        // Check if there is already an alert displayed
+        if (document.getElementById("alert-container-page").hasChildNodes()) {
+            // Remove the old alert
+            document.getElementById("alert-container-page").removeChild(document.getElementById("alert-container").firstChild);
+        }
+        //Create a new div element for the alert
+        var alertDiv = document.createElement("div");
+        //Add the Bootstrap class for a danger alert and fixed-top to the div
+        alertDiv.classList.add("alert", "alert-danger","text-center","fixed-top");
+        //Add the text of the alert to the div
+        alertDiv.innerHTML = "Please enter a valid quantity between 1 and 99.";
+        //Add the alert div to the page
+        document.getElementById("alert-container-page").appendChild(alertDiv);
+         // remove alert after 3 seconds
+         setTimeout(function(){ 
+            alertDiv.remove(); 
+         }, 5000);
+        return;
+     }
+
       orderName.innerHTML = "" + product.name + " x" + productQuantity.value;
       const totalPrice = (parseInt(product.price) * parseInt(productQuantity.value) );
       orderTotalPrice.innerHTML = "₱" + totalPrice + ".00";
@@ -93,12 +110,40 @@ function readJson() {
         xhr.onload = function() {
             if (xhr.status === 200) {
                 // Request was successful, display a message to the customer
-                var message = "Your order has been placed successfully! We will contact you soon.";
-                alert(message);
+                if (document.getElementById("alert-container-modal").hasChildNodes()) {
+                  // Remove the old alert
+                  document.getElementById("alert-container-modal").removeChild(document.getElementById("alert-container").firstChild);
+                }
+                //Create a new div element for the alert
+                var alertDiv = document.createElement("div");
+                //Add the Bootstrap class for a danger alert and fixed-top to the div
+                alertDiv.classList.add("alert", "alert-success","text-center","fixed-top");
+                //Add the text of the alert to the div
+                alertDiv.innerHTML = "Your order has been placed successfully! We will contact you soon.";
+                //Add the alert div to the page
+                document.getElementById("alert-container-modal").appendChild(alertDiv);
+                // remove alert after 5 seconds
+                setTimeout(function(){ 
+                    alertDiv.remove(); 
+                }, 5000);
             } else {
                 // Request failed, display an error message
-                var message = "There was an error placing your order. Please try again later.";
-                alert(message);
+                if (document.getElementById("alert-container-modal").hasChildNodes()) {
+                  // Remove the old alert
+                  document.getElementById("alert-container-modal").removeChild(document.getElementById("alert-container").firstChild);
+                }
+                //Create a new div element for the alert
+                var alertDiv = document.createElement("div");
+                //Add the Bootstrap class for a danger alert and fixed-top to the div
+                alertDiv.classList.add("alert", "alert-danger","text-center","fixed-top");
+                //Add the text of the alert to the div
+                alertDiv.innerHTML = "There was an error placing your order. Please try again later.";
+                //Add the alert div to the page
+                document.getElementById("alert-container-modal").appendChild(alertDiv);
+                // remove alert after 5 seconds
+                setTimeout(function(){ 
+                    alertDiv.remove(); 
+                }, 5000);
             }
             // Close the modal after the request is complete
             shippingModal.classList.remove("show");
@@ -106,7 +151,22 @@ function readJson() {
         }
         // Add this check before sending the request
         if (!name || !mobileNumber || !address || !brgy || !city || !province || !region || !country || !postalCode) {
-          alert("Please fill out all the required fields.");
+          //Create a new div element for the alert
+          if (document.getElementById("alert-container-modal").hasChildNodes()) {
+            // Remove the old alert
+            document.getElementById("alert-container-modal").removeChild(document.getElementById("alert-container").firstChild);
+          }
+          var alertDiv = document.createElement("div");
+          //Add the Bootstrap class for a danger alert and fixed-top to the div
+          alertDiv.classList.add("alert", "alert-danger","text-center","fixed-top");
+          //Add the text of the alert to the div
+          alertDiv.innerHTML = "Please fill out all the required fields.";
+          //Add the alert div to the page
+          document.getElementById("alert-container-modal").appendChild(alertDiv);
+          // remove alert after 5 seconds
+          setTimeout(function(){ 
+              alertDiv.remove(); 
+          }, 5000);
           return;
         }
 

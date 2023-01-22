@@ -18,3 +18,15 @@
   input:invalid {
     border: 1px solid red;
   }
+
+  @font-face {
+    font-family: 'Dancing Script';
+    src: url('../assets/dancing_script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .dancing-script {
+    font-family: 'Dancing Script', sans-serif;
+  }
+  

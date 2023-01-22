@@ -53,7 +53,6 @@ function readJson() {
     });
 }
 
-
     //Listener for buy Button
     buyButton.addEventListener("click", function() {
       productQuantity = document.getElementById("inputQuantity");

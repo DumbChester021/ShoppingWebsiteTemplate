@@ -35,7 +35,7 @@
                             <a class="nav-link text-white" href="shop.html">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Categories</a>
+                            <a class="nav-link text-white" href="categories.html">Categories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="signin.html">My Account</a>
@@ -44,10 +44,11 @@
                 </div>
             </div>
         </nav>
+        <!--SearchBar-->
         <div class="container-fluid bg-secondary">
             <form class="d-flex p-2" action="">
-                <input type="search" placeholder="Search Products" class="form-control">
-                <input type="submit" value="Search" class="btn btn-warning">
+                <input id="searchForm" type="search" placeholder="Search Products" class="form-control">
+                <input id="searchBtn"type="button" value="Search" class="btn btn-warning">
             </form>
         </div>
         <!-- ShowCase-->
@@ -74,7 +75,7 @@
     <!--Feautured Products-->
     <section class="text-start div-md-2">
         <div class="container text-start pt-5">
-            <h1 class="py-5 text-start">Featured Products</h1>
+            <h1 class="py-5 text-start" id="resultLabel">Featured Products</h1>
             <div class="row" id="productsContainer"></div>
         </div>
     </section>
@@ -110,5 +111,6 @@
     </footer>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="index.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>

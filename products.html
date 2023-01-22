@@ -34,7 +34,7 @@
                             <a class="nav-link text-white" href="shop.html">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Categories</a>
+                            <a class="nav-link text-white" href="categories.html">Categories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="signin.html">My Account</a>
@@ -45,10 +45,16 @@
         </nav>
         <div class="container-fluid bg-secondary">
             <form class="d-flex p-2" action="">
-                <input type="search" placeholder="Search Products" class="form-control">
-                <input type="submit" value="Search" class="btn btn-warning">
+                <input id="searchForm" type="search" placeholder="Search Products" class="form-control">
+                <input id="searchBtn"type="button" value="Search" class="btn btn-warning">
             </form>
         </div>
+        <section class="text-start div-md-2">
+            <div class="container text-start">
+                <h1 class="text-start" id="resultLabel"></h1>
+                <div class="row" id="productsContainer"></div>
+            </div>
+        </section>
 <!-- Product section-->
 <section class="py-5">
     <div class="container px-4 px-lg-5 my-5">
@@ -425,5 +431,6 @@
 </footer>
     <script src="js/bootstrap.bundle.js"></script>
     <script src="products.js"></script>
+    <script src="search.js"></script>
 </body>
 </html>

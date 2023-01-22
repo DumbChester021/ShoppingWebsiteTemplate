@@ -34,7 +34,7 @@
                             <a class="nav-link text-white" href="shop.html">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="categories.html">Categories</a>
+                            <a class="nav-link text-white" href="#">Categories</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="signin.html">My Account</a>
@@ -49,16 +49,21 @@
                 <input id="searchBtn"type="button" value="Search" class="btn btn-warning">
             </form>
         </div>
-    <!--Feautured Products-->
-    <section class="text-start">
-        <div class="container text-start pt-5">
-            <h1 class="p-2 pb-5 text-center">All Products</h1>
-            <div class="row" id="productsContainer"></div>
+<!--All Products-->
+<div class="container">
+    <h1 class="p-2 pt-5 text-center" id="categoriesLabel">Categories</h1>
+</div>
+<div class="container-fluid">
+    <div class="category p-2">
+        <div class="row" id="productsContainer">
+            <!-- other card elements -->
         </div>
-    </section>
-    </main>
-    <!--Footer MF-->
-    <footer class="bg-dark mt-auto">
+        
+    </div>
+</div>
+</main>
+<!--Footer-->
+<footer class="bg-dark mt-auto">
                 <!--Contact-->
                 <section class="p-5 text-light bg-dark">
                     <div class="container">
@@ -88,7 +93,7 @@
         </div>
     </footer>
     <script src="js/bootstrap.bundle.js"></script>
-    <script src="shop.js"></script>
+    <script src="categories.js"></script>
     <script src="search.js"></script>
 </body>
 </html>

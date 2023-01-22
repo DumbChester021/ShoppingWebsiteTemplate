@@ -2,10 +2,12 @@ fetch('products.json')
     .then(response => response.json())
     .then(data => {
         let productsContainer = document.getElementById("productsContainer");
-        data.products.forEach(product => {
+        data.products
+            .filter(product => product.featured === true)
+            .sort((a, b) => a.priority - b.priority)
+            .forEach(product => {
 
             let productId = product.id;
-            console.log("ProductID is:" + productId);
 
             let col = document.createElement("div");
             col.classList.add("col","py-2");
@@ -76,3 +78,5 @@ let shopNowButton = document.getElementById("shopNowButton");
 shopNowButton.addEventListener("click", function() {
     window.location.href = "shop.html";
 });
+
+

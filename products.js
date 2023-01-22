@@ -137,7 +137,7 @@ function readJson() {
         var msg = "New Order Placed!:%0AOrder number:1870" + orderNumber + "%0ADate:" + dateString2 + "%0ATime:" + timeString3 + "%0AName: " + name + "%0AMobile Number: " + mobileNumber + "%0AAddress: " + address + ", " + brgy + ", " + city + ", " + province + ", " + region + ", " + country + "%0APostal Code: " + postalCode + "%0AShipping Notes: " + shippingNotes + "%0AProduct Name: " + productName + "%0AProduct Price: " + productPrice + "%0AQuantity:" + quantity + "%0AColor:" + orderColor + "%0ATotal Price:" + totalPrice;
     
         // Send the message to Telegram
-        var telegramUrl = "https://api.telegram.org/bot5319457642:AAFIlKkH6IsLqfUGd2RvI8GVBRtl_2FUaQE/sendMessage?chat_id=@BreakSoftOfficial&text=" + '"' + msg +'"';
+        var telegramUrl = "https://api.telegram.org/bot5319457642:AAHeP9Dpl39sMiVdv1l9aZr943BrElY7OXY/sendMessage?chat_id=@BreakSoftOfficial&text=" + '"' + msg +'"';
     
         var xhr = new XMLHttpRequest();
         xhr.open('POST', telegramUrl);

@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", function() {
   function searchProducts() {
     let searchInput = document.querySelector("input[type=search]");
     let searchQuery = searchInput.value.toLowerCase();
+    if (searchQuery == "") {
+      return;
+    }
     fetch('products.json')
         .then(response => response.json())
         .then(data => {

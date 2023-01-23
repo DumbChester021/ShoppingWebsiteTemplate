@@ -14,45 +14,47 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
     <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
-            <div class="container-fluid justify-content-start">
-                <button class="navbar-toggler bg-dark ps-2" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <img class="navbar-brand logo-img justify-content-start" src="assets/logo.png">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-success dancing-script" href="#">Josie's Online Shop</a>
-                    </li>
+        <nav class="navbar bg-dark sticky-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#">
+                        <img src="/assets/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                        Josie's Online Shop
+                      </a>
+                    </div>
+                  </nav>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="shop.html">All Items</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="categories.html">Categories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="signin.html">My Account</a>
+                  </li>
                 </ul>
-                <div class="collapse navbar-collapse" id="navmenu">
-                    <ul class="navbar-nav ms-auto ">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="shop.html">Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="categories.html">Categories</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="signin.html">My Account</a>
-                        </li>
-                    </ul> 
-                </div>
+              </div>
             </div>
-        </nav>
-        <!--SearchBar-->
-        <div class="container-fluid bg-secondary">
-            <form class="d-flex p-2" action="">
-                <input id="searchForm" type="search" placeholder="Search Products" class="form-control">
-                <input id="searchBtn"type="button" value="Search" class="btn btn-warning">
+          </nav>
+          <div class="container-fluid p-2 bg-dark">
+            <form class="d-flex" role="search">
+                <input class="form-control form-control-sm me-2" type="search" placeholder="Search our Store.." aria-label="Search">
+                <button class="btn btn-success me-2 btn-sm" type="submit" id="searchBtn">Search</button>
             </form>
         </div>
+        
+    </header>
         <!-- ShowCase-->
-        <section class="bg-success text-light p-2">
+        <section class="bg-dark text-light p-2">
             <div class="container py-2">
                 <div class="d-flex align-items-center justify-content-between text-center text-sm-start">
                     <div>
@@ -64,13 +66,12 @@
                         <p class="lead my-4">
                             Shop the latest trends and must-haves at unbeatable prices.
                         </p>
-                        <button class="btn btn-warning btn-lg" id="shopNowButton">Shop Now</button>
+                        <button class="btn btn-success btn-lg" id="shopNowButton">Shop Now</button>
                     </div>
                     <img class="img-fluid w-50 h-50 d-none d-sm-block" src="assets/showcase.png">
                 </div>
             </div>
         </section>
-    </header>
     <main>
     <!--Feautured Products-->
     <section class="text-start div-md-2">

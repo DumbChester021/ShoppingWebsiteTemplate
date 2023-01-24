@@ -57,7 +57,7 @@
             "price": 699,
             "colors": ["Black", "Red", "Pink", "Yellow"],
             "category": "Accesories",
-            "featured": true,
+            "featured": false,
             "priority": 1
         },
         {
@@ -67,7 +67,8 @@
             "imgSrc": "assets/tocino220g.webp",
             "price": 75,
             "category": "Food",
-            "featured": false
+            "featured": true,
+            "priority": 5
         },
         {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-8",
@@ -76,7 +77,8 @@
             "imgSrc": "assets/chickentocino220g.webp",
             "price": 80,
             "category": "Food",
-            "featured": false
+            "featured": true,
+            "priority": 2
         },
         {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-9",
@@ -85,7 +87,8 @@
             "imgSrc": "assets/skinlesslonganiza225g.webp",
             "price": 70,
             "category": "Food",
-            "featured": false
+            "featured": true,
+            "priority": 2
         },
         {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-10",
@@ -104,7 +107,8 @@
             "imgSrc": "assets/sweetham250g.webp",
             "price": 70,
             "category": "Food",
-            "featured": false
+            "featured": true,
+            "priority": 4
         },
         {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-12",
@@ -114,7 +118,7 @@
             "price": 90,
             "category": "Food",
             "featured": true,
-            "priority": 3
+            "priority": 7
         },
         {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-13",
@@ -133,7 +137,7 @@
             "price": 165,
             "category": "Food",
             "featured": true,
-            "priority": 4
+            "priority": 1
         },
         {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-15",
@@ -151,10 +155,11 @@
             "imgSrc": "assets/porktapa220g.webp",
             "price": 75,
             "category": "Food",
-            "featured": false
+            "featured": true,
+            "priority": 6
         },
         {
-            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-16",
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-17",
             "name": "Pork Tapa",
             "description": "This is the pork version of the tapa. Made from choice pork cuts with a combination of sweet and peppery taste.",
             "imgSrc": "assets/porktapa220g.webp",

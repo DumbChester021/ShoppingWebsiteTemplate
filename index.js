@@ -2,6 +2,8 @@ fetch('products.json')
     .then(response => response.json())
     .then(data => {
         let productsContainer = document.getElementById("productsContainer");
+        let row = document.createElement("div");
+        row.classList.add("row");
         data.products
             .filter(product => product.featured === true)
             .sort((a, b) => a.priority - b.priority)
@@ -10,17 +12,21 @@ fetch('products.json')
             let productId = product.id;
 
             let col = document.createElement("div");
-            col.classList.add("col","py-2");
+            col.classList.add("col-lg-3","col-md-4","col-sm-8","py-2");
 
             let card = document.createElement("div");
             card.classList.add("card");
-            card.style.width = "18rem";
+            
+            card.style.height = "250px";
+            card.style.width = "250px";
             
             let img = document.createElement("img");
             img.src = product.imgSrc;
             img.classList.add("card-img-top");
             img.alt = product.name;
             card.appendChild(img);
+
+
             
             let cardBody = document.createElement("div");
             cardBody.classList.add("card-body");

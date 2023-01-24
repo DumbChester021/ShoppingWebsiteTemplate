@@ -29,9 +29,8 @@ document.addEventListener("DOMContentLoaded", function() {
   //Function Show Results
   function displaySearchResults(searchResults, searchedQuery) {
     console.log("Now Trying to Display Results")
-    let productsContainer = document.getElementById("productsContainer");
-    productsContainer.innerHTML = ""; // clear the previous products
-  
+      let productsContainer = document.getElementById("productsContainer");
+      productsContainer.innerHTML = ""; // clear the previous products
     searchResults.forEach(product => {
         let productId = product.id;
         let col = document.createElement("div");

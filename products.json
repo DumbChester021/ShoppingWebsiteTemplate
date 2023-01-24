@@ -7,7 +7,7 @@
             "imgSrc": "assets/product1.png",
             "price": 999,
             "category": "Supplements",
-            "featured": true,
+            "featured": false,
             "priority": 7
         },
         {
@@ -17,7 +17,7 @@
             "imgSrc": "assets/product2.png",
             "price": 749,
             "category": "Supplements",
-            "featured": true,
+            "featured": false,
             "priority": 5
         },
         {
@@ -27,7 +27,7 @@
             "imgSrc": "assets/product3.png",
             "price": 859,
             "category": "Supplements",
-            "featured": true,
+            "featured": false,
             "priority": 8
         },
         {
@@ -46,7 +46,7 @@
             "imgSrc": "https://ap-south-1.linodeobjects.com/twcako-storage/admin/664989154.jpg",
             "price": 949,
             "category": "Supplements",
-            "featured": true,
+            "featured": false,
             "priority": 6
         },
         {
@@ -152,7 +152,44 @@
             "price": 75,
             "category": "Food",
             "featured": false
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-16",
+            "name": "Pork Tapa",
+            "description": "This is the pork version of the tapa. Made from choice pork cuts with a combination of sweet and peppery taste.",
+            "imgSrc": "assets/porktapa220g.webp",
+            "price": 75,
+            "category": "Food",
+            "featured": false
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-16",
+            "name": "Pork Tapa",
+            "description": "This is the pork version of the tapa. Made from choice pork cuts with a combination of sweet and peppery taste.",
+            "imgSrc": "assets/porktapa220g.webp",
+            "price": 75,
+            "category": "Food",
+            "featured": false
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-16",
+            "name": "Pork Tapa",
+            "description": "This is the pork version of the tapa. Made from choice pork cuts with a combination of sweet and peppery taste.",
+            "imgSrc": "assets/porktapa220g.webp",
+            "price": 75,
+            "category": "Food",
+            "featured": false
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-16",
+            "name": "Pork Tapa",
+            "description": "This is the pork version of the tapa. Made from choice pork cuts with a combination of sweet and peppery taste.",
+            "imgSrc": "assets/porktapa220g.webp",
+            "price": 75,
+            "category": "Food",
+            "featured": false
         }
+    
         
     ]
 }

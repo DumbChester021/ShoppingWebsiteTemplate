@@ -12,9 +12,14 @@ Categories - Done
 Search Button - Done
 re-Arrange/Fix the Display Grid -Done 
 
+
+
+Inventory and Sales System and Management trough DB
 Back Button
-Sign-In - 
+Sign-In - DB
+New Card Generation Format
 CutomerService Contact
+Fix Navbar for Small Screen
 
 ----------------------
 

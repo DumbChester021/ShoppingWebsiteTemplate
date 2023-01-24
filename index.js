@@ -17,9 +17,6 @@ fetch('products.json')
             let card = document.createElement("div");
             card.classList.add("card");
             
-            card.style.height = "250px";
-            card.style.width = "250px";
-            
             let img = document.createElement("img");
             img.src = product.imgSrc;
             img.classList.add("card-img-top");

@@ -259,6 +259,7 @@ function readJson() {
               var name = document.getElementById("nameS").value;
               var mobileNumber = document.getElementById("mobileNumberS").value;
               var roomNumber = document.getElementById("roomNumberS").value;
+              var sessionS = document.getElementById("sessionS").value;
               var buildingName = document.getElementById("buildingNameS").value;
               var grade = document.getElementById("gradeS").value;
               var floor = document.getElementById("floorS").value;

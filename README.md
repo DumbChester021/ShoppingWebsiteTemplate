@@ -22,6 +22,8 @@ CutomerService Contact
 Fix Navbar for Small Screen
 Add New Items
 Customized to BN1 Teachers
+Categories in-depth
+Products In-Depth
 
 ----------------------
 

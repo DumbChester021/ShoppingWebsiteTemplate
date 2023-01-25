@@ -1,66 +1,6 @@
 {
     "products": [
         {
-            "id": "457a6a82-9736-11ed-a8fc-0242ac120002-1",
-            "name": "Barley Capsule",
-            "description": "Pure organic, high in fiber, protein, and complex carbohydrates with micronutrients. Has 17 vitamins, 16 minerals, and 18 amino acids, is high in chlorophyll, and enzymes, and is rich in fiber.",
-            "imgSrc": "assets/product1.png",
-            "price": 999,
-            "category": "Supplements",
-            "featured": false,
-            "priority": 7
-        },
-        {
-            "id": "5f1afcfe-9736-11ed-a8fc-0242ac120002-2",
-            "name": "Fusion Coffee",
-            "description": "High in dietary fiber, protein, and complex carbohydrates from organic young barley grass, robusta coffee beans.",
-            "imgSrc": "assets/product2.png",
-            "price": 749,
-            "category": "Supplements",
-            "featured": false,
-            "priority": 5
-        },
-        {
-            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-3",
-            "name": "Boost Coffee",
-            "description": "Boost Coffee is a 15-gram mix of Robusta coffee, Tongkat Ali, and organic barley grass powder. It's designed for active people and provides energy and stamina with 78mg of robusta coffee per serving.",
-            "imgSrc": "assets/product3.png",
-            "price": 859,
-            "category": "Supplements",
-            "featured": false,
-            "priority": 8
-        },
-        {
-            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-4",
-            "name": "Barley Powder",
-            "description": "Santé Pure Barley in the canister is pure, certified organic young barley grass powder, added with Stevia. The Pure Barley Canister in 200g is perfect for those who want to have more scoops of this superfood in a glass.",
-            "imgSrc": "assets/product4.png",
-            "price": 999,
-            "category": "Supplements",
-            "featured": false
-        },
-        {
-            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-5",
-            "name": "Vitamin C",
-            "description": "Get double the protection and double the health benefits when you take Daily-C Plus 500mg. It’s got the combination of Vitamin C and Zinc that help boost immunity and fight off free radicals, to support overall health and wellness.",
-            "imgSrc": "https://ap-south-1.linodeobjects.com/twcako-storage/admin/664989154.jpg",
-            "price": 949,
-            "category": "Supplements",
-            "featured": false,
-            "priority": 6
-        },
-        {
-            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-6",
-            "name": "Smart Watch",
-            "description": "Custom wallpaper, Bluetooth calling, music control, social APP message reminder, incoming call reminder, SMS reminder, multi-sport, alarm reminder, sedentary reminder, mobile phone search, music playback, stopwatch, step counting, distance, calories, sleep monitoring, Heart rate monitoring, blood pressure, blood oxygen, searching for devices, language switching and raising your hand to light up the screen. ",
-            "imgSrc": "assets/product5.png",
-            "price": 699,
-            "colors": ["Black", "Red", "Pink", "Yellow"],
-            "category": "Accesories",
-            "featured": false,
-            "priority": 1
-        },
-        {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-7",
             "name": "Original Pork Tocino",
             "description": "The product which made Pampanga’s Best known not just in Pampanga but all over the world. This is the first and Original Tocino dated back in 1967.  Indeed, ito ang tamang timpla!",
@@ -193,8 +133,66 @@
             "price": 75,
             "category": "Food",
             "featured": false
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-6",
+            "name": "Smart Watch",
+            "description": "Custom wallpaper, Bluetooth calling, music control, social APP message reminder, incoming call reminder, SMS reminder, multi-sport, alarm reminder, sedentary reminder, mobile phone search, music playback, stopwatch, step counting, distance, calories, sleep monitoring, Heart rate monitoring, blood pressure, blood oxygen, searching for devices, language switching and raising your hand to light up the screen. ",
+            "imgSrc": "assets/product5.png",
+            "price": 699,
+            "colors": ["Black", "Red", "Pink", "Yellow"],
+            "category": "Accesories",
+            "featured": false,
+            "priority": 1
+        },
+        {
+            "id": "457a6a82-9736-11ed-a8fc-0242ac120002-1",
+            "name": "Barley Capsule",
+            "description": "Pure organic, high in fiber, protein, and complex carbohydrates with micronutrients. Has 17 vitamins, 16 minerals, and 18 amino acids, is high in chlorophyll, and enzymes, and is rich in fiber.",
+            "imgSrc": "assets/product1.png",
+            "price": 999,
+            "category": "Supplements",
+            "featured": false,
+            "priority": 7
+        },
+        {
+            "id": "5f1afcfe-9736-11ed-a8fc-0242ac120002-2",
+            "name": "Fusion Coffee",
+            "description": "High in dietary fiber, protein, and complex carbohydrates from organic young barley grass, robusta coffee beans.",
+            "imgSrc": "assets/product2.png",
+            "price": 749,
+            "category": "Supplements",
+            "featured": false,
+            "priority": 5
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-3",
+            "name": "Boost Coffee",
+            "description": "Boost Coffee is a 15-gram mix of Robusta coffee, Tongkat Ali, and organic barley grass powder. It's designed for active people and provides energy and stamina with 78mg of robusta coffee per serving.",
+            "imgSrc": "assets/product3.png",
+            "price": 859,
+            "category": "Supplements",
+            "featured": false,
+            "priority": 8
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-4",
+            "name": "Barley Powder",
+            "description": "Santé Pure Barley in the canister is pure, certified organic young barley grass powder, added with Stevia. The Pure Barley Canister in 200g is perfect for those who want to have more scoops of this superfood in a glass.",
+            "imgSrc": "assets/product4.png",
+            "price": 999,
+            "category": "Supplements",
+            "featured": false
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-5",
+            "name": "Vitamin C",
+            "description": "Get double the protection and double the health benefits when you take Daily-C Plus 500mg. It’s got the combination of Vitamin C and Zinc that help boost immunity and fight off free radicals, to support overall health and wellness.",
+            "imgSrc": "https://ap-south-1.linodeobjects.com/twcako-storage/admin/664989154.jpg",
+            "price": 949,
+            "category": "Supplements",
+            "featured": false,
+            "priority": 6
         }
-    
-        
     ]
 }

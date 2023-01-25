@@ -259,7 +259,7 @@ function readJson() {
               var name = document.getElementById("nameS").value;
               var mobileNumber = document.getElementById("mobileNumberS").value;
               var roomNumber = document.getElementById("roomNumberS").value;
-              var sessionS = document.getElementById("sessionS").value;
+              var session = document.getElementById("sessionS").value;
               var buildingName = document.getElementById("buildingNameS").value;
               var grade = document.getElementById("gradeS").value;
               var floor = document.getElementById("floorS").value;
@@ -283,7 +283,7 @@ function readJson() {
               
       
               // Construct the message to send
-              var msg = "New Order Placed!:%0AOrder number:1870" + orderNumber + "%0ADate:" + dateString2 + "%0ATime:" + timeString3 + "%0AName: " + name + "%0AMobile Number: " + mobileNumber + "%0ASession: " + sessionS + "%0ARoom Number: " + roomNumber + "%0ABuilding Name: " + buildingName + "%0AGrade: " + grade + "%0AFloor: " + floor + "%0ADelivery Notes: " + deliveryNotes + "%0AProduct Name: " + productName + "%0AProduct Price: " + productPrice + "%0AQuantity:" + quantity + "%0AColor:" + orderColor + "%0ATotal Price:" + totalPrice;
+              var msg = "New Order Placed!:%0AOrder number:1870" + orderNumber + "%0ADate:" + dateString2 + "%0ATime:" + timeString3 + "%0AName: " + name + "%0AMobile Number: " + mobileNumber + "%0ASession: " + session + "%0ARoom Number: " + roomNumber + "%0ABuilding Name: " + buildingName + "%0AGrade: " + grade + "%0AFloor: " + floor + "%0ADelivery Notes: " + deliveryNotes + "%0AProduct Name: " + productName + "%0AProduct Price: " + productPrice + "%0AQuantity:" + quantity + "%0AColor:" + orderColor + "%0ATotal Price:" + totalPrice;
 
               // Send the message to Telegram
               var telegramUrl = "https://api.telegram.org/bot5319457642:AAHeP9Dpl39sMiVdv1l9aZr943BrElY7OXY/sendMessage?chat_id=@BreakSoftOfficial&text=" + '"' + msg +'"';
@@ -333,7 +333,7 @@ function readJson() {
                   schoolShippingModal.style.display = "none";
               }
               // Add this check before sending the request
-              if (!nameS || !mobileNumberS || !sessionS || !roomNumberS || !buildingNameS || !gradeS || !floorS) {
+              if (!name || !mobileNumber || !session || !roomNumber || !buildingName || !grade || !floor) {
                  //Create a new div element for the alert
                 if (document.getElementById("alert-container-modalS").hasChildNodes()) {
                   // Remove the old alert

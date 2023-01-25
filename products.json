@@ -99,6 +99,60 @@
             "priority": 6
         },
         {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-22",
+            "name": "Meaty Burger (9pcs)",
+            "description": "Now, get mouth-wateringly delicious all-beef goodness from Pampanga’s Best Hamburger Patties.  Just serve with cheese, lettuce, tomatoes, onions and top with ketchup and mustard and you’ll have a sandwich filling that’s way better than those served in those fast-food joints or fancy restaurants.  Have fun eating these at home or at a picnic",
+            "imgSrc": "assets/meaty225g.webp",
+            "price": 65,
+            "category": "Food",
+            "featured": false
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-23",
+            "name": "Chicken Pops",
+            "description": "REAL MEATY GOODNESS IN EVERY BITE, From the purveyor of the Original Tocino, Pampanga’s Best proudly introduces Pampanga’s Best Chicken Pops! This brand showcases a selection of flavorful pinoy favorites in bite-sized servings that is guaranteed to satisfy your hearty cravings. Pampanga’s Best Chicken Pops is quick and easy to prepare—a perfect partner to each quality time with your family or any bonding moment with your friends. From everyday afternoon merienda with your kids, a movie marathon buddy with your barkada, to a quick snack break with your office ensemble, Pampanga’s Best Bite Delights is sure to give your meticulous taste buds REAL MEATY GOODNESS IN EVERY BITE!..",
+            "imgSrc": "assets/chickenpops250g.webp",
+            "price": 90,
+            "category": "Food",
+            "featured": false
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-24",
+            "name": "Siomai (15pcs)",
+            "description": "A dimsum enjoyed either steamed or fried, best served with toyo calamansi and topped off with garlic bits. ",
+            "imgSrc": "assets/siomai250g.webp",
+            "price": 50,
+            "category": "Food",
+            "featured": false
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-25",
+            "name": "Tenderlicious Tocino",
+            "description": "The Pampanga’s Best Tenderlicious Tocino is exact as its name implies—tender and delicious! Made from the finest healthy young pork, this product was made using the same original tocino formula that made both Pampanga’s Best (and Kapampangan cooking) equally famous.",
+            "imgSrc": "assets/tendertocino200g.webp",
+            "price": 60,
+            "category": "Food",
+            "featured": false
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-26",
+            "name": "Fatless Tocino",
+            "description": "This is the tocino without the guilt. Tasty, mouth-watering tocino with its distinctive salty-sweet taste – without the fat. This is a great food trip for the connoisseur who’s watching his calorie count, or the weekend athlete who knows great-teasting food. Taste it to believe it.",
+            "imgSrc": "assets/fatlesstocino240g.webp",
+            "price": 85,
+            "category": "Food",
+            "featured": false
+        },
+        {
+            "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-27",
+            "name": "Lumpiang Shanghai (30pcs)",
+            "description": "Lumpiang Shanghai is a type of Filipino egg roll. The basic filling is composed of ground pork along with minced onions, carrots, and seasonings such as salt and ground black pepper.",
+            "imgSrc": "assets/fatlesstocino240g.webp",
+            "price": 100,
+            "category": "Food",
+            "featured": false
+        },
+        {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-18",
             "name": "Glizel's Cashew Nuts",
             "description": "Glizel's Cashew Nuts are a premium quality, delicious and healthy snack option. These cashews are carefully selected and roasted to perfection, enhancing their natural sweet and nutty flavor. They are a rich source of healthy fats, protein, and antioxidants, making them a great snack for those looking to boost their energy levels and support overall health. Glizel's Cashew Nuts are also gluten-free, non-GMO, and vegan, making them suitable for a wide range of dietary preferences. Enjoy them as a snack on their own or add them to your favorite recipes for a crunchy and nutritious boost",
@@ -124,7 +178,8 @@
             "price": 130,
             "category": "Food",
             "featured": false
-        },{
+        },
+        {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-21",
             "name": "White Eggs (1 dozen)",
             "description": "Our Organic White Eggs are a versatile and nutritious food option. These eggs are sourced from chickens raised in a free-range, organic environment, free of pesticides and chemicals. They are a rich source of protein and other essential nutrients, and have a creamy white color. These eggs are perfect for cooking, baking and making a delicious breakfast. They are also free of antibiotics, hormones, and other harmful chemicals. Add them to your cart now and enjoy the taste and health benefits of our organic white eggs.",

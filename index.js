@@ -40,7 +40,7 @@ fetch('products.json')
             
             let button = document.createElement("button");
             button.type = "button";
-            button.classList.add("btn", "btn-primary");
+            button.classList.add("btn", "btn-success");
             button.innerHTML = "View Product";
             button.addEventListener("click", function(){
               window.location.href = "products.html?product="+productId; 

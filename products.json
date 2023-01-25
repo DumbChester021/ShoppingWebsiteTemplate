@@ -15,7 +15,7 @@
             "name": "Boneless Chicken Tocino",
             "description": "Another first from Pampanga’s Best! Same original Tocino recipe made from 100% premium chicken meat.",
             "imgSrc": "assets/chickentocino220g.webp",
-            "price": 80,
+            "price": 75,
             "category": "Food",
             "featured": true,
             "priority": 2
@@ -35,7 +35,7 @@
             "name": "Beef Tapa",
             "description": "A Filipino version of Beef jerky, this choice cut beef is aged to improve its tenderness.  Having that salty and peppery taste, it is best served with garlic rice and egg.  Prepare this quick meal to satisfy that tapsilog craving.",
             "imgSrc": "assets/beeftapa250g.webp",
-            "price": 105,
+            "price": 100,
             "category": "Food",
             "featured": true,
             "priority": 2
@@ -65,7 +65,7 @@
             "name": "Tasty Meaty Hotdog with Cheese",
             "description": "This reddish hotdog is perfect for feeding hungry kids, friends and office mates. Plump and firm to the touch; this delicious hotdog lets out a delectable juice and cheese with every bite.  Take it with mayonnaise, sauerkraut, mustard, catsup or whatever strikes your fancy.",
             "imgSrc": "assets/cheesedog250g.webp",
-            "price": 70,
+            "price": 65,
             "category": "Food",
             "featured": false
         },

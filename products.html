@@ -83,8 +83,10 @@
                             <option value="default">Select a color</option>
                         </select>
                     </div>
-                    <div class="container d-flex">
-                        <button class="btn btn-warning flex-shrink-0 ms-auto" id="buyButton" type="button">
+                    <div class="container d-flex flex-row">
+                            <input type="checkbox" class="form-check-input px-2" id="teacherToggle">
+                            <label class="form-check-label px-2" for="teacherToggle">Are you a BN1 Teacher?</label>
+                            <button class="btn btn-warning flex-shrink-0 ms-auto" id="buyButton" type="button">
                             <i class="bi-cart-fill me-1"></i>
                             Buy Now
                         </button>
@@ -202,7 +204,7 @@
 </section>
 </main>
     <footer class="bg-dark mt-auto">
-        <!--Modal for Buy Button-->      
+        <!--Normal Modal for Buy Button-->      
     <div class="modal" id="shippingModal">
         <div class="modal-dialog  bg-seconday">
         <div class="modal-content">
@@ -212,7 +214,7 @@
               </div>
             <div class="modal-header modal-dark bg-dark">
                 <h5 class="modal-title text-light">Input your Shipping Details</h5>
-                <button type="button" class="btn-close bg-danger text-light" data-dismiss="modal">
+                <button type="button" class="btn-close bg-danger text-light" data-dismiss="modal" id="normalModalButtonX">
                 </button>
         </div>
         <div class="modal-body">
@@ -269,110 +271,12 @@
                 <label for="province">Province</label>
                 <select class="form-control" id="stateProvince" disabled>
                     <option value="Rizal">Rizal</option>
-                    <option value="Abra">Abra</option>
-                    <option value="Agusan del Norte">Agusan del Norte</option>
-                    <option value="Agusan del Sur">Agusan del Sur</option>
-                    <option value="Aklan">Aklan</option>
-                    <option value="Albay">Albay</option>
-                    <option value="Antique">Antique</option>
-                    <option value="Apayao">Apayao</option>
-                    <option value="Aurora">Aurora</option>
-                    <option value="Basilan">Basilan</option>
-                    <option value="Bataan">Bataan</option>
-                    <option value="Batanes">Batanes</option>
-                    <option value="Batangas">Batangas</option>
-                    <option value="Benguet">Benguet</option>
-                    <option value="Biliran">Biliran</option>
-                    <option value="Bohol">Bohol</option>
-                    <option value="Bukidnon">Bukidnon</option>
-                    <option value="Bulacan">Bulacan</option>
-                    <option value="Cagayan">Cagayan</option>
-                    <option value="Camarines Norte">Camarines Norte</option>
-                    <option value="Camarines Sur">Camarines Sur</option>
-                    <option value="Camiguin">Camiguin</option>
-                    <option value="Capiz">Capiz</option>
-                    <option value="Catanduanes">Catanduanes</option>
-                    <option value="Cavite">Cavite</option>
-                    <option value="Cebu">Cebu</option>
-                    <option value="Compostela Valley">Compostela Valley</option>
-                    <option value="Cotabato">Cotabato</option>
-                    <option value="Davao del Norte">Davao del Norte</option>
-                    <option value="Davao del Sur">Davao del Sur</option>
-                    <option value="Davao Occidental">Davao Occidental</option>
-                    <option value="Davao Oriental">Davao Oriental</option>
-                    <option value="Dinagat Islands">Dinagat Islands</option>
-                    <option value="Eastern Samar">Eastern Samar</option>
-                    <option value="Guimaras">Guimaras</option>
-                    <option value="Ifugao">Ifugao</option>
-                    <option value="Ilocos Norte">Ilocos Norte</option>
-                    <option value="Ilocos Sur">Ilocos Sur</option>
-                    <option value="Iloilo">Iloilo</option>
-                    <option value="Isabela">Isabela</option>
-                    <option value="Kalinga">Kalinga</option>
-                    <option value="La Union">La Union</option>
-                    <option value="Laguna">Laguna</option>
-                    <option value="Lanao del Norte">Lanao del Norte</option>
-                    <option value="Lanao del Sur">Lanao del Sur</option>
-                    <option value="Leyte">Leyte</option>
-                    <option value="Maguindanao">Maguindanao</option>
-                    <option value="Marinduque">Marinduque</option>
-                    <option value="Masbate">Masbate</option>
-                    <option value="Misamis Occidental">Misamis Occidental</option>
-                    <option value="Misamis Oriental">Misamis Oriental</option>
-                    <option value="Mountain Province">Mountain Province</option>
-                    <option value="Negros Occidental">Negros Occidental</option>
-                    <option value="Negros Oriental">Negros Oriental</option>
-                    <option value="Northern Samar">Northern Samar</option>
-                    <option value="Nueva Ecija">Nueva Ecija</option>
-                    <option value="Nueva Vizcaya">Nueva Vizcaya</option>
-                    <option value="Occidental Mindoro">Occidental Mindoro</option>
-                    <option value="Oriental Mindoro">Oriental Mindoro</option>
-                    <option value="Palawan">Palawan</option>
-                    <option value="Pampanga">Pampanga</option>
-                    <option value="Pangasinan">Pangasinan</option>
-                    <option value="Quezon">Quezon</option>
-                    <option value="Quirino">Quirino</option>
-                    <option value="Rizal">Rizal</option>
-                    <option value="Romblon">Romblon</option>
-                    <option value="Samar">Samar</option>
-                    <option value="Sarangani">Sarangani</option>
-                    <option value="Siquijor">Siquijor</option>
-                    <option value="Sorsogon">Sorsogon</option>
-                    <option value="South Cotabato">South Cotabato</option>
-                    <option value="Southern Leyte">Southern Leyte</option>
-                    <option value="Sultan Kudarat">Sultan Kudarat</option>
-                    <option value="Sulu">Sulu</option>
-                    <option value="Surigao del Norte">Surigao del Norte</option>
-                    <option value="Surigao del Sur">Surigao del Sur</option>
-                    <option value="Tarlac">Tarlac</option>
-                    <option value="Tawi-Tawi">Tawi-Tawi</option>
-                    <option value="Zambales">Zambales</option>
-                    <option value="Zamboanga del Norte">Zamboanga del Norte</option>
-                    <option value="Zamboanga del Sur">Zamboanga del Sur</option>
-                    <option value="Zamboanga Sibugay">Zamboanga Sibugay</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="region">Region</label>
                 <select class="form-control" id="region" disabled>
                     <option value="REGION_IV_A">Region IV-A - CALABARZON</option>
-                    <option value="NCR">NCR - National Capital Region</option>
-                    <option value="CAR">CAR - Cordillera Administrative Region</option>
-                    <option value="REGION_I">Region I - Ilocos Region</option>
-                    <option value="REGION_II">Region II - Cagayan Valley</option>
-                    <option value="REGION_III">Region III - Central Luzon</option>
-                    <option value="REGION_IV_A">Region IV-A - CALABARZON</option>
-                    <option value="REGION_IV_B">Region IV-B - MIMAROPA</option>
-                    <option value="REGION_V">Region V - Bicol Region</option>
-                    <option value="REGION_VI">Region VI - Western Visayas</option>
-                    <option value="REGION_VII">Region VII - Central Visayas</option>
-                    <option value="REGION_VIII">Region VIII - Eastern Visayas</option>
-                    <option value="REGION_IX">Region IX - Zamboanga Peninsula</option>
-                    <option value="REGION_X">Region X - Northern Mindanao</option>
-                    <option value="REGION_XI">Region XI - Davao Region</option>
-                    <option value="REGION_XII">Region XII - SOCCSKSARGEN</option>
-                    <option value="REGION_XIII">Region XIII - Caraga</option>
-                    <option value="ARMM">ARMM - Autonomous Region in Muslim Mindanao</option>
                 </select>
             </div>
             <div class="form-group">
@@ -380,10 +284,6 @@
                 <select class="form-control" id="country" disabled>
                 <option>Philippines</option>
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="postalCode">Postal Code / ZIP</label>
-                <input type="text" class="form-control" id="postalCode" placeholder="Enteryour Postal Code / ZIP" required>
             </div>
                 <div class="form-group">
                     <label for="shippingNotes">Shipping Notes</label>
@@ -394,6 +294,89 @@
         <div class="modal-footer d-flex">
             <button type="button" class="btn btn-success" id="placeOrderButton">Place Order</button>
             <button type="button" class="btn btn-danger" data-dismiss="modal" id="cancelOrderButton" >Cancel Order</button>
+        </div>
+    </div>
+            
+        </div>
+    </div>      
+    <!--SchoolShipping Modal-->
+    <div class="modal" id="schoolShippingModal">
+        <div class="modal-dialog  bg-seconday">
+        <div class="modal-content">
+            <!--Alerts-->
+            <div class="container">
+                <div id="alert-container-modalS" class="container-fluid text-center alert-zindex"></div>
+              </div>
+            <div class="modal-header modal-dark bg-dark">
+                <h5 class="modal-title text-light">Input your Shipping Details</h5>
+                <button type="button" class="btn-close bg-danger text-light" data-dismiss="modal" id="schoolModalButtonX">
+                </button>
+        </div>
+        <div class="modal-body">
+            <form action="">
+                <div class="form-group rounded bg-light container flex-column">
+                    <ul class="list-unstyled py-2 text-dark">
+                        <li id="orderDetails">Order Details:</li>
+                        <li id="orderNameS"></li>
+                        <li id="orderTotalPriceS"></li>
+                        <li id="orderColorS"></li>
+                    </ul>
+                </div>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="nameS" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="mobileNumber">Mobile Number</label>
+                <input type="text" class="form-control" id="mobileNumberS"  name="mobileNumber" placeholder="Enter your mobile number" required>
+            </div>
+            <div class="form-group">
+                <label for="session">Session</label>
+                <select class="form-control" id="sessionS" required>
+                    <option value="am">A.M. - Morning Session</option>
+                    <option value="pm">P.M. - Afternoon Session</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="roomNumber">Room Number</label>
+                <input type="text" class="form-control" id="roomNumberS" name="roomNumber" placeholder="Room Number" required>
+            </div>
+            <div class="form-group">
+                <label for="buildingName">Building Name</label>
+                <input type="text" class="form-control" id="buildingNameS" name="buildingName" placeholder="Building Name" required>
+            </div>
+            <div class="form-group">
+                <label for="grade">Grade</label>
+                <select class="form-control" id="gradeS" required>
+                    <option value="kinder">Kinder</option>
+                    <option value="grd1">Grade 1</option>
+                    <option value="grd2">Grade 2</option>
+                    <option value="grd3">Grade 3</option>
+                    <option value="grd4">Grade 4</option>
+                    <option value="grd5">Grade 5</option>
+                    <option value="grd6">Grade 6</option>
+                    <option value="orhers">Ohers (Specify in Delivery Notes)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="floor">Floor</label>
+                <select class="form-control" id="floorS" required>
+                    <option value="flr1">1st Floor</option>
+                    <option value="flr2">2nd Floor</option>
+                    <option value="flr3">3rd Floor</option>
+                    <option value="flr4">4th Floor</option>
+                    <option value="flr5">5th Floor</option>
+                </select>
+            </div>
+                <div class="form-group">
+                    <label for="deliveryNotes">Delivery Notes</label>
+                        <textarea class="form-control" id="deliveryNotes" rows="3" placeholder="Enter your delivery instructions here"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer d-flex">
+            <button type="button" class="btn btn-success" id="placeOrderButtonS">Place Order</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal" id="cancelOrderButtonS" >Cancel Order</button>
         </div>
     </div>
             

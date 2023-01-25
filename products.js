@@ -345,7 +345,7 @@ function readJson() {
                 //Add the text of the alert to the div
                 alertDiv.innerHTML = "Please fill out all the required fields.";
                 //Add the alert div to the page
-                document.getElementById("alert-container-modal").appendChild(alertDiv);
+                document.getElementById("alert-container-modalS").appendChild(alertDiv);
                 // remove alert after 5 seconds
                 setTimeout(function(){ 
                     alertDiv.remove(); 

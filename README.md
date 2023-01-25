@@ -26,6 +26,8 @@ Products In-Depth
 Back Button for Products Page
 PageTree in Products Page
 RElated Products
+Stocks of Items
+Sort and Filter in All Items
 
 ----------------------
 

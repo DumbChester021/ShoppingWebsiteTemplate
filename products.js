@@ -60,7 +60,7 @@ function readJson() {
 
     //Listener for buy Button
     buyButton.addEventListener("click", function() {
-      if (product.name == "Skinless Longaniza" || product.name == "Pork Barbecue" || product.name == "Pork Tapa") {
+      if (product.name == "Skinless Longaniza" || product.name == "Pork Barbecue" || product.name == "Pork Tapa" || product.name == "Lumpiang Shanghai (30pcs)") {
         alert("Item is temporarily Out of Stock");
         return;
       }

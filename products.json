@@ -27,7 +27,7 @@
             "imgSrc": "assets/skinlesslonganiza225g.webp",
             "price": 70,
             "category": "Food",
-            "featured": true,
+            "featured": false,
             "priority": 2
         },
         {
@@ -67,7 +67,8 @@
             "imgSrc": "assets/cheesedog250g.webp",
             "price": 65,
             "category": "Food",
-            "featured": false
+            "featured": true,
+            "priority": 1
         },
         {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-14",
@@ -76,7 +77,7 @@
             "imgSrc": "assets/porkbbq500g.webp",
             "price": 165,
             "category": "Food",
-            "featured": true,
+            "featured": false,
             "priority": 1
         },
         {
@@ -86,7 +87,8 @@
             "imgSrc": "assets/porkbbqonstick500g.webp",
             "price": 175,
             "category": "Food",
-            "featured": false
+            "featured": true,
+            "priority": 2
         },
         {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-16",
@@ -95,7 +97,7 @@
             "imgSrc": "assets/porktapa220g.webp",
             "price": 75,
             "category": "Food",
-            "featured": true,
+            "featured": false,
             "priority": 6
         },
         {
@@ -105,7 +107,8 @@
             "imgSrc": "assets/meaty225g.webp",
             "price": 65,
             "category": "Food",
-            "featured": false
+            "featured": true,
+            "priority": 8
         },
         {
             "id": "5f1b00a0-9736-11ed-a8fc-0242ac120002-23",

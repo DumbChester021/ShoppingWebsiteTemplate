@@ -60,6 +60,10 @@ function readJson() {
 
     //Listener for buy Button
     buyButton.addEventListener("click", function() {
+      if (product.name == "Skinless Longaniza" || product.name == "Pork Barbecue" || product.name == "Pork Tapa") {
+        alert("Item is temporarily Out of Stock");
+        return;
+      }
 
       productQuantity = document.getElementById("inputQuantity");
       if (productQuantity.value < 1 == false) {
